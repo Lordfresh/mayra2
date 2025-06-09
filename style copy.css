@@ -197,10 +197,10 @@ footer {
   opacity: 0.9;
 }
 .flecha.izquierda {
-  left: -100px;
+  left: -30px;
 }
 .flecha.derecha {
-  right: -80px;
+  right: -30px;
 }
 
 /* ======= RESPONSIVE ======= */
