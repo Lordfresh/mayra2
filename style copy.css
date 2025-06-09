@@ -1,0 +1,232 @@
+/* ======= ESTRUCTURA GENERAL ======= */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ======= HEADER ======= */
+
+header {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #002147;
+  color: white;
+}
+header img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+header p em {
+  font-size: 1.2rem;
+  color: #ffd700;
+}
+
+/* ======= SECCIONES ======= */
+
+section {
+  margin-bottom: 40px;
+}
+section h2 {
+  border-bottom: 3px solid #ffd700;
+  padding-bottom: 10px;
+  color: #002147;
+}
+section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ======= TABLA ======= */
+
+table {
+  width: 60%;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffd700;
+}
+th,
+td {
+  padding: 1rem;
+  vertical-align: top;
+  text-align: left;
+  width: 30%;
+}
+th {
+  background-color: #002147;
+  font-weight: bold;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+.price {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* ======= CONTACTO ======= */
+
+.contact p {
+  margin: 6px 0;
+  font-weight: 600;
+  color: #002147;
+}
+.contact strong {
+  color: #ffd700;
+}
+
+/* ======= FOOTER ======= */
+
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #002147;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* ======= SECCIÓN SLIDER ======= */
+
+.slider-container {
+  position: relative;
+  max-width: 1000px;
+  max-height: 1000px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.slider-wrapper {
+  padding: 40px;
+  overflow: visible;
+  position: relative;
+}
+
+.tarjetas {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.tarjeta {
+  position: relative;
+  flex: 0 0 320px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+.tarjeta:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+.tarjeta img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.tarjeta:nth-child(even) {
+  background-color: #fff9c4;
+}
+.tarjeta:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.contenido {
+  padding: 16px;
+}
+.contenido h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.contenido p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ======= FLECHAS SLIDER ======= */
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: black;
+  border: none;
+  padding: 10px 16px;
+  font-size: 50px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.9;
+}
+.flecha.izquierda {
+  left: -100px;
+}
+.flecha.derecha {
+  right: -100px;
+}
+
+/* ======= RESPONSIVE ======= */
+
+@media (max-width: 768px) {
+  .slider-container {
+    padding: 0 20px;
+    /* display: block; */
+    /* display: flex; */
+    overflow: scroll;
+    max-height: 500px;
+    width: 90%;
+  }
+
+  .tarjetas {
+    flex-direction: column;
+    transform: none !important;
+    gap: 24px;
+  }
+
+  .tarjeta {
+    width: 80%;
+    margin: auto auto 24px;
+    overflow: visible;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .tarjeta:hover {
+    transform: none !important;
+    z-index: auto !important;
+  }
+
+  .contenido {
+    padding: 20px;
+  }
+
+  .flecha {
+    display: none;
+  }
+}
