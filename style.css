@@ -269,3 +269,11 @@ footer {
     display: none;
   }
 }
+@media (max-width: 403px) {
+  .slider-container {
+    margin: 30px auto;
+  }
+  .slider-wrapper {
+    padding: 0px;
+  }
+}
