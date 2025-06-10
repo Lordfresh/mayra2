@@ -221,6 +221,18 @@ footer {
     height: 250px;
     padding: 20px;
   }
+  table {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    word-break: break-word; /* fuerza a cortar palabras largas si es necesario */
+  }
+
   .slider-container {
     padding: 0 20px;
     /* display: block; */
@@ -237,7 +249,7 @@ footer {
   }
 
   .tarjeta {
-    width: 80%;
+    width: 90%;
     margin: auto auto 24px;
     overflow: visible;
     transform: none !important;
